@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <script>
+      const data = [...document.querySelectorAll(".inp:checked")].map(
+        (e) => e.value
+      );
+      console.log(data);
+    </script>
+    <style>
+      body {
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+      h1 {
+        color: blue;
+        text-align: center;
+      }
+
+      div {
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: inline-block;
+        width: 150px;
+      }
+
+      button {
+        margin-left: 150px;
+      }
+
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User Registration Form</h1>
+    <br />
+    <form action="/posting" method="post">
+      <div>
+        <label>Name <span>*</span></label>
+        <input type="text" name="username" required />
+      </div>
+      <div>
+        <label>Password <span>*</span></label>
+        <input type="Password" name="password" required />
+      </div>
+      <div>
+        <label>Age <span>*</span></label>
+        <input type="text" name="age" required />
+      </div>
+      <div>
+        <label>Mobile Number <span>*</span></label>
+        <input type="text" name="mnumber" />
+      </div>
+      <div>
+        <label> Email <span>*</span></label>
+        <input type="email" name="email" required />
+      </div>
+      <div>
+        <label>Gender <span>*</span></label>
+        <input type="radio" name="gender" value="Male" /> Male
+        <input type="radio" name="gender" value="Female" /> Female
+        <input type="radio" name="gender" value="Others" /> Others
+      </div>
+      <div>
+        <label> State <span>*</span></label>
+        <select name="event">
+          <option name="event" value="Kerala">Kerala</option>
+          <option name="event" value="TN">TN</option>
+        </select>
+      </div>
+      <div>
+        <label>Skills <span>*</span></label>
+        <input class="inp" type="checkbox" name="skills" value="JavaScript" />
+        JavaScript
+        <input class="inp" type="checkbox" name="skills" value="Python" />
+        Python
+        <input class="inp" type="checkbox" name="skills" value="C++" /> C++
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
